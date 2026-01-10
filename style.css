@@ -61,16 +61,17 @@ body {
 
 .hero-text .hero-sub {
   max-width: 500px;
-  margin: 30px auto;
+  margin: 30px 0;
   color: #444;
 }
 
-/* ---------- HERO IMAGE ---------- */
-.hero-image img {
+
+.hero-split > .hero-image img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
+
 
 /* ---------- BUTTONS ---------- */
 .btn {
@@ -291,17 +292,16 @@ footer {
   margin-top: 20px;
 }
 
+/* ✅ BACKGROUND IMAGE HANDLING (FIX) */
 .contact-section .hero-image {
   position: relative;
-}
-
-.contact-section .hero-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  background-size: cover;
+  background-position: center;
   border-radius: 8px;
+  min-height: 420px;
 }
 
+/* Overlay stays */
 .contact-section .hero-image .overlay {
   position: absolute;
   inset: 0;
