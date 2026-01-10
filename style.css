@@ -32,12 +32,13 @@ body {
   position: relative;
   z-index: 2;
   max-width: 1100px;
-  margin: auto;
-  text-align: center;
+  margin: 0 auto;      /* center all content */
+  text-align: center;  /* center all content by default */
+  padding: 0 80px;     /* matches hero spacing */
 }
 
 /* =================================================
-   HERO SPLIT LAYOUT (PDF STYLE)
+   HERO SPLIT LAYOUT
 ================================================= */
 .hero-split {
   min-height: 100vh;
@@ -60,7 +61,7 @@ body {
 
 .hero-text .hero-sub {
   max-width: 500px;
-  margin: 30px 0;
+  margin: 30px auto;
   color: #444;
 }
 
@@ -88,7 +89,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Dark button variant */
 .dark-btn {
   border: 1px solid #111;
   color: #111;
@@ -127,7 +127,7 @@ body {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
 /* ---------- SERVICE CARDS ---------- */
@@ -211,12 +211,15 @@ footer {
 }
 
 /* =================================================
-   FULL HEIGHT + WHO WE ARE CUSTOMIZATION
+   FULL HEIGHT SECTIONS
 ================================================= */
 .full-height {
   min-height: 100vh;
 }
 
+/* =================================================
+   WHO WE ARE SECTION - CENTER ALIGNED
+================================================= */
 .who-we-are .overlay {
   background: rgba(8, 18, 40, 0.85);
 }
@@ -233,8 +236,10 @@ footer {
 }
 
 .who-we-are .content {
-  max-width: 900px;
-  text-align: left;
+  max-width: 900px;   /* text width */
+  margin: 0 auto;     /* center horizontally */
+  text-align: center; /* center text like hero */
+  padding: 0 80px;    /* match hero section */
 }
 
 /* =================================================
@@ -259,7 +264,9 @@ footer {
   margin: 12px 0;
 }
 
-/* ---------- CONTACT HERO SPLIT ---------- */
+/* =================================================
+   CONTACT HERO SPLIT
+================================================= */
 .contact-section {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -313,41 +320,24 @@ footer {
   max-width: 100%;
 }
 
-/* Center-align Who We Are section like the hero visually */
-.who-we-are .content {
-  max-width: 900px; /* keeps text from being too wide */
-  margin: 0 auto;   /* centers the content horizontally */
-  text-align: center;
-  padding: 0 20px;  /* optional, small padding on sides */
-}
-
 /* =================================================
    RESPONSIVE
 ================================================= */
 @media (max-width: 900px) {
+  .hero-split,
   .contact-section {
     grid-template-columns: 1fr;
     text-align: center;
     padding: 40px 20px;
   }
 
-  .contact-section .hero-image {
-    margin-top: 30px;
-  }
-
-  .hero-split {
-    grid-template-columns: 1fr;
-    padding: 80px 20px;
-    text-align: center;
-  }
-
   .hero-text .hero-sub {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
   }
 
   .who-we-are .content {
     text-align: center;
+    padding: 0 20px;
   }
 
   .services .grid,
@@ -359,11 +349,4 @@ footer {
   .hero-logo img {
     height: 40px;
   }
-}
-/* Center-align Who We Are section like the hero visually */
-.who-we-are .content {
-  max-width: 900px; /* keeps text from being too wide */
-  margin: 0 auto;   /* centers the content horizontally */
-  text-align: center;
-  padding: 0 20px;  /* optional, small padding on sides */
 }
