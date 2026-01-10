@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #111;
+}
+
+/* ---------- Background Image Sections ---------- */
+.bg-img {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* =================================================
+   HERO SPLIT LAYOUT (PDF STYLE)
+================================================= */
+.hero-split {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+  padding: 0 80px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  letter-spacing: 4px;
+}
+
+.hero-text .tagline {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.hero-text .hero-sub {
+  max-width: 500px;
+  margin: 30px 0;
+  color: #444;
+}
+
+/* ---------- HERO IMAGE ---------- */
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #111;
+  color: #111;
+}
+
+.btn:hover {
+  background: #111;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Dark button variant (for dark sections if needed) */
+.dark-btn {
+  border: 1px solid #111;
+  color: #111;
+}
+
+.dark-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* =================================================
+   SECTIONS
+================================================= */
+.section {
+  padding: 90px 20px;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* ---------- GRID ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* ---------- CARDS ---------- */
+.card {
+  padding: 30px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* ---------- SERVICE CARDS ---------- */
+.service {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+}
+
+.service h3,
+.service p {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- DARK SECTION ---------- */
+.dark {
+  background: #111;
+  color: #fff;
+}
+
+.dark .card {
+  border-color: #333;
+}
+
+/* ---------- TESTIMONIAL ---------- */
+.testimonial {
+  font-style: italic;
+  color: #eee;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ---------- TESTIMONIALS NAVY OVERLAY ---------- */
+.testimonials .overlay {
+  background: rgba(8, 18, 40, 0.85); /* Navy blue with 75% opacity */
+}
+
+/* Improve readability for text */
+.testimonials h2,
+.testimonials .testimonial {
+  color: #fff;
+}
+
+/* Add spacing between heading and testimonial blocks */
+.testimonials .grid {
+  margin-top: 90px; /* Adjust the value as needed */
+  gap: 30px; /* ensures space between individual testimonials */
+}
+
+
+/* ---------- CONTACT ---------- */
+.contact p {
+  margin: 10px 0;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid #eee;
+}
+
+/* ---------- FADE IN ANIMATION ---------- */
+.fade-in {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================================================
+   FULL HEIGHT + WHO WE ARE CUSTOMIZATION
+================================================= */
+
+/* ---------- FULL HEIGHT SECTIONS ---------- */
+.full-height {
+  min-height: 100vh;
+}
+
+
+
+/* ---------- WHO WE ARE NAVY OVERLAY ---------- */
+.who-we-are .overlay {
+  background: rgba(8, 18, 40, 0.85);
+}
+
+/* Improve readability */
+.who-we-are h2,
+.who-we-are h3,
+.who-we-are p {
+  color: #fff;
+}
+
+.who-we-are h3 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.who-we-are .content {
+  max-width: 900px;
+  text-align: left;
+}
+
+/* =================================================
+   WHY CHOOSE US ICONS
+================================================= */
+.why-grid .card {
+  text-align: center;
+}
+
+.why-grid svg {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 15px;
+  stroke-width: 1.5;
+}
+
+/* WHY CHOOSE US ICON SPACING */
+.why-grid h3 {
+  margin-bottom: 8px;
+}
+
+.why-grid svg {
+  margin: 12px 0;
+}
+
+/* ---------- CONTACT HERO SPLIT ---------- */
+.contact-section {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+  padding: 0 80px;
+  color: #111;
+  position: relative;
+}
+
+.contact-section .hero-text h2 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.contact-section .contact p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.contact-section .btn {
+  margin-top: 20px;
+}
+
+.contact-section .hero-image {
+  position: relative;
+}
+
+.contact-section .hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.contact-section .hero-image .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* optional darker effect */
+}
+
+/* HERO LOGO */
+.hero-logo {
+  margin-bottom: 10px; /* space between logo and heading */
+}
+
+.hero-logo img {
+  height: 100px; /* adjust logo size as needed */
+  width: auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .contact-section .hero-image {
+    margin-top: 30px;
+  }
+}
+
+
+/* =================================================
+   RESPONSIVE
+================================================= */
+@media (max-width: 900px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .hero-text .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .who-we-are .content {
+    text-align: center;
+  }
+}
+@media (max-width: 900px) {
+  .services .grid,
+  .dark .grid,
+  .section.bg-img .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .hero-logo img {
+    height: 40px; /* smaller on mobile */
+  }
+}
+
