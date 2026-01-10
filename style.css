@@ -323,6 +323,27 @@ footer {
   max-width: 100%;
 }
 
+/* Sections aligned like hero-text */
+.aligned-content .content,
+.aligned-content .hero-text {
+  max-width: 500px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Override hero-split spacing for aligned sections if needed */
+.aligned-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 80px;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .contact-section {
@@ -366,6 +387,19 @@ footer {
 @media (max-width: 900px) {
   .hero-logo img {
     height: 40px; /* smaller on mobile */
+  }
+}
+
+@media (max-width: 900px) {
+  .aligned-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .aligned-content .content,
+  .aligned-content .hero-text {
+    max-width: 100%;
   }
 }
 
