@@ -281,11 +281,11 @@ footer {
 }
 
 .pricing-grid {
-  max-width: 500px;
+  max-width: 700px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 25px;
   align-items: start;
 }
 
@@ -293,7 +293,7 @@ footer {
   background: #fff;
   border: 1px solid #e6e6e6;
   border-radius: 12px;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
