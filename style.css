@@ -266,6 +266,52 @@ footer {
 }
 
 /* =================================================
+   PRICING SECTION
+================================================= */
+.pricing-section {
+  background: #f8f9fb;
+  text-align: center;
+}
+
+.pricing-sub {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.pricing-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 30px;
+  align-items: start;
+}
+
+.pricing-card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* =================================================
    CONTACT HERO SPLIT
 ================================================= */
 .contact-section {
@@ -342,11 +388,26 @@ footer {
 
   .services .grid,
   .dark .grid,
-  .section.bg-img .grid {
+  .section.bg-img .grid,
+  .pricing-grid {
     grid-template-columns: 1fr;
   }
 
   .hero-logo img {
     height: 40px;
   }
+
+  .pricing-section {
+    padding: 70px 20px;
+  }
+
+  .pricing-sub {
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+  }
+
+  .pricing-card {
+    padding: 15px;
+  }
 }
+
